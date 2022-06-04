@@ -1,0 +1,289 @@
+@import 'reset';
+@import 'vars';
+@import 'global';
+
+@import '_blocks/_header__navigation';
+@import '_blocks/introduction';
+@import '_blocks/footer';
+@import '_blocks/button';
+
+/* ============================================== Стили ============================================== */
+.header{
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(152, 195, 232, 0.2) 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+.header__content{
+    &-box{
+        max-width: 510px;
+    }
+    &-inner{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &-title{
+        @extend %title1-galien;
+        max-width: 510px;
+        letter-spacing: 0.038em;
+    }
+    &-descr{
+        max-width: 425px;
+        margin: 32px 0 71px 0;
+        opacity: .6;
+        letter-spacing: 0.06em;
+    }
+    &-img{
+        position: absolute;
+        right: 10%;
+        bottom: 20%;
+    }
+}
+
+
+
+                        /* ========== Первая секция (what we do ...) ========== */
+.whatwedo{
+    padding-top: 180px;
+    &__inner{
+        position: relative;
+        display: flex;
+        justify-content: end;
+    }
+    &__title{
+        @extend %title3;
+        color: $blue2;
+        max-width: 358px;
+        letter-spacing: 0.047em;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__items-left{
+        margin-right: 100px;
+        padding-top: 296px;
+    }
+}
+.whatwedo__item{
+    width: 380px;
+    min-height: 525px;
+    background-color: #fff;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 48px;
+    
+    &-content{
+        max-width: 284px;
+    }
+    &-title{
+        @extend %text-title;
+        color: $blue1;
+        margin-top: 51px;
+        margin-bottom: 16px;
+        letter-spacing: 0.048em;
+    }
+    &-descr{
+        opacity: .6;
+        margin-bottom: 32px;
+    }
+    &-link{
+        font-size: 14px;
+        line-height: 30px;
+        color: $blue4;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        position: relative;
+        display: block;
+        transition: transform .2s ease;
+    }
+    &-link::after{
+        content: url(../img/arrow.svg);
+        position: absolute;
+        top: 3px;
+        padding-left: 28px;
+    }    
+}
+.whatwedo__item-link:hover{
+    
+    transform: translateX(25px);
+}
+.whatwedo__item + .whatwedo__item{
+    margin-top: 100px;
+}
+.small-img-margin{
+    margin-top: 45px;
+}
+
+
+                /* ========== Вторая секция (проект) ========== */
+.projects{
+    &__inner{
+        padding-top: 180px;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding-bottom: 96px;
+    }
+    &__title{
+        @extend %title3;
+        max-width: 227px;
+        letter-spacing: 0.046em;
+    }
+    &__descr{
+        max-width: 540px;
+        opacity: .6;
+        margin-right: 80px;
+        margin-left: 93px;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+
+.slick-slide:nth-child(even) a{
+    margin-left: 48px;
+    width: auto !important;
+}
+.slick-arrow{
+    border: none;
+    background-color: transparent;
+    color: $blue3;
+    font-family: 'Gilroy';
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    position: absolute;
+    bottom: -50px;
+    cursor: pointer;
+}
+.slick-prev{
+    left: 34px;
+}
+.slick-next{
+    right: 34px;
+}
+.projects__content{    
+    
+    &-row + &-row{
+        margin-top: 96px;
+    }
+    &-item{
+        position: relative;
+        
+    }
+    &-info{
+        position: absolute;
+        color: #fff;
+    }
+    &-title{
+        font-size: 28px;
+        line-height: 46px;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+    }
+    &-text{
+        opacity: .8;
+        line-height: 46px;
+    }
+}
+.info--big{
+    top: 48px;
+    right: 48px;
+}
+.info--small{
+    top: 32px;
+    left: 32px;
+}
+
+                    /* ========== Третья секция (Клиенты) ========== */
+.clients{
+    margin-top: 180px;
+    background-color: $blue4;
+    border-radius: 200px 0 0 0;
+    &__inner{
+        padding-top: 96px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        margin-bottom: 111px;
+    }
+    &__title{
+        @extend %title3;
+        color: #fff;
+        max-width: 223px;
+        letter-spacing: 0.046em;
+    }
+    &__descr{
+        color: #FFFFFF;
+        opacity: 0.6;
+        letter-spacing: 0.05em;
+        max-width: 540px;
+        margin-left: 97px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(4, 235px);
+        padding-bottom: 125px;
+    }
+    &__item{
+        @extend %text-title;
+        letter-spacing: 0.02em;
+        color: #F2F2F2;
+        line-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 128px;
+    }
+    &__item:nth-last-child(1){
+        background-color: rgba(31, 63, 104, .2);
+        text-align: center;
+        transition: background-color .2s ease-in;
+    }
+    &__item:nth-last-child(1):hover{
+        background-color: #316099;
+    }
+    &__item:nth-child(n+5){
+        border-top: 1px solid #fff;
+    }
+    &__item:not(:nth-child(4n)){
+        border-right: 1px solid #fff;
+    }
+    &__item .clients__link{
+        display: block;
+        font-size: 20px;
+        line-height: 128px;
+        width: 100%;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+    }
+}
+.spoiler{
+    display: none;
+}
+
+.footer__right--bgcolor{
+    background-color: $blue4;
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Galien"; 
+    // адрес шрифта и тип 
+    src: url("../../fonts/Galien/TTF/Galien-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+
+
+/* ============================================== Media ============================================== */
+@import 'media/index-media.scss';

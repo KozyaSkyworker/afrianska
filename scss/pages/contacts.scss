@@ -1,0 +1,155 @@
+@import '../reset';
+@import '../vars';
+@import '../global';
+
+@import '../_blocks/_header__navigation';
+@import '../_blocks/introduction';
+@import '../_blocks/footer';
+@import '../_blocks/button';
+
+/* ============================================ STYLES ============================================*/
+
+/* шапка абсолютна высотой в 128px, поэтому отступ */
+.main{
+    padding-top: 128px;
+}
+
+.feedback{
+    &__inner{
+        padding-top: 57px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.feedback__info{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 55px;
+    &-img{
+        width: 300px;
+        height: 180px;
+        align-self: center;
+        margin-top: 100px;
+        margin-bottom: 70px;
+    }
+    &-box + &-box{
+        margin-top: 40px;
+    }
+    &-title{
+        @extend %text-title;
+        letter-spacing: 0.04em;
+        color: $blue1;
+        margin-bottom: 24px;
+        display: inline-block;
+    }
+    &-text{
+        opacity: .6;
+        max-width: 299px;
+    }
+    &-list-item + &-list-item{
+        margin-top: 16px;
+    }
+    &-list-link{
+        color: $blue1;
+        letter-spacing: 0.05em;
+        position: relative;
+        padding-left: 40px;
+        opacity: .6;
+    }
+    &-list-link:hover{
+        opacity: 1;
+    }
+}
+.phone-link::before{
+    content: url(../../../img/contacts/phone.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.web-link::before{
+    content: url(../../../img/contacts/earth.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.mail-link::before{
+    content: url(../../../img/contacts/mail.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.feedback__right{
+    background: #FFFFFF;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    flex-basis: 540px;
+    &-inner{
+        padding-top: 56px;
+        padding-left: 56px;
+    }
+    &-title{
+        margin-bottom: 48px;
+    }
+    &-form{
+        max-width: 428px;
+    }
+    &-box{
+        display: flex;
+        flex-direction: column;
+    }
+    &-box + &-box{
+        margin-top: 32px;
+    }
+    &-label{
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        opacity: 0.8;
+        margin-bottom: 8px;
+    }
+    &-input{
+        border: 1px solid rgba(53, 110, 173, .4);
+        border-radius: 10px;
+        height: 72px;
+        padding: 0 36px;
+    }
+    &-text{
+        border: 1px solid rgba(53, 110, 173, .4);
+        border-radius: 10px;
+        padding: 21px 36px;
+        resize: none;
+        height: 144px;
+    }
+    &-input::placeholder,
+    &-text::placeholder{
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        opacity: 0.2;
+    }
+    &-btn{
+        margin: 72px 0 56px 0;
+        width: 428px;
+        height: 72px;
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        font-weight: 600;
+    }
+}
+
+
+
+.map{
+    &__inner{
+        padding: 96px 0;
+    }
+    &__inner iframe{
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    }
+}
+
+
+
+/* ============================================== Media ============================================== */
+@import '../media/contacts-media.scss';

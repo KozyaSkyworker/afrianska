@@ -1,0 +1,48 @@
+$blue1: #1F3F68;
+$blue2: #316099;
+$blue3: #356EAD;
+$blue4: #5A98D0;
+
+%title1-galien{
+    font-family: 'Galien';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+}
+%title2-galien{
+    font-family: 'Galien';
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: $blue1;
+}
+%title3-galien{
+    font-family: 'Galien';
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: $blue1;
+}
+%title2{
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+%title3{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+}
+/* :) */
+%text-title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+}

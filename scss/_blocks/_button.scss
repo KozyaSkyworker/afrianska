@@ -1,0 +1,16 @@
+.btn{
+    width: 220px;
+    height: 56px;
+    background-color: $blue4;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    &:hover{
+        background-color: #5caef7;
+    }
+}

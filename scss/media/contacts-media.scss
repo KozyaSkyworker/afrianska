@@ -1,0 +1,113 @@
+
+@media (max-width: 960px) {
+    .feedback__inner{
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    .feedback__info{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .feedback__info-box+.feedback__info-box{
+        margin-top: 0;
+    }
+    .feedback__info-img{
+        display: none;        
+    }
+    .feedback__right{
+        max-width: 540px;
+        width: 100%;
+        align-self: center;
+    }
+    .map__inner{
+        padding: 56px 0;
+        iframe{
+            width: 100%;
+        }
+    }    
+}
+
+@media (max-width: 760px) {
+    .feedback__info-text{
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 580px) {
+    .feedback__right{
+        max-width: 480px;
+    }
+    .feedback__right-inner{
+        padding: 15px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .feedback__right-title{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback__right{
+        max-width: 320px;
+    }
+    .feedback__right-form{
+        max-width: 300px;
+    }
+    .feedback__right-box{
+        max-width: 300px;
+    }
+    .feedback__right-input{
+        width: 300px;
+    }
+    .feedback__right-btn{
+        width: 300px;
+        margin: 32px 0 26px 0;
+    }
+    
+}
+
+@media (max-width: 479px) {
+    .introduction__text{
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .feedback__info{
+        flex-direction: column;
+    }
+    .feedback__info-text{
+        max-width: 320px;
+    }
+    .feedback__info-box + .feedback__info-box{
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 403px) {
+    .menu{
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .introduction__title{
+        font-size: 34px;
+        line-height: 64px;
+    }
+}
+
+@media (max-width: 320px) {
+    .feedback__right{
+        box-shadow: none;
+    }
+    .feedback__right-box + .feedback__right-box{
+        margin-top: 16px;
+    }
+}
+
+@import 'footer-media.scss';

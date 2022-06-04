@@ -1,0 +1,204 @@
+@import '../reset';
+@import '../vars';
+@import '../global';
+
+@import '../_blocks/_header__navigation';
+@import '../_blocks/introduction';
+@import '../_blocks/footer';
+@import '../_blocks/button';
+
+/* ============================================ STYLES ============================================*/
+/* шапка абсолютна высотой в 128px, поэтому отступ */
+.main{
+    padding-top: 128px;
+}
+
+.search{
+    &__inner{
+        padding-top: 56px;
+        position: relative;
+    }
+    &__icon{
+        position: absolute;
+        bottom: 18px;
+        left: 27px;
+        cursor: pointer;
+    }
+    &__input{
+        border-radius: 10px;
+        background-color: #f4f4f4;
+        border: none;
+        width: 100%;
+        height: 56px;
+        padding: 0 72px;
+    }
+    &__input::placeholder{
+        font-size: 16px;
+        line-height: 19px;
+        color: $blue1;
+        opacity: 0.6;
+    }
+}
+
+
+.art_title{
+        margin-bottom: 32px;
+        @extend %text-title;
+        line-height: 25px;
+        color: $blue3;
+        opacity: .8;
+}
+.popular{
+    padding-top: 56px;
+    &__link{
+        margin: 54px 0 24px 0;
+        color: $blue3;
+        opacity: .8;
+        line-height: 20px;
+        align-self: flex-end;
+        font-weight: 600;
+    }
+}
+.popular__inner{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    &__info{
+        max-width: 380px;
+    }
+    &__title{
+        @extend %title2-galien;
+    }
+    &__descr{
+        margin: 32px 0 30px 0;
+    }
+}
+.other__item-descr,
+.first__descr,
+.articles__item-descr{
+    color: #000;
+    opacity: .6;
+}
+.other{
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.other__item{
+    flex-basis: 300px;
+    &-title{
+        @extend %title3-galien;
+        margin-top: 16px;
+    }
+    &-descr{
+        margin: 16px 0;
+    }
+}
+.article__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    &-info{
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        color: $blue1;
+    }
+    &-author{
+        color: $blue1;
+    }
+    &-datetime{
+        color: rgba(0, 0, 0, 0.4);
+        margin-top: 4px;
+    }
+    &-btns{
+        display: flex;
+    }
+    &-img{
+        cursor: pointer;
+    }
+    &-img + &-img{
+        margin-left: 35px;
+    }
+}
+
+
+
+.articles{
+    &__inner{
+        padding: 56px 0;
+    }
+    &__items{
+        max-width: 859px;
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 56px;
+    }
+    &__link{
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: $blue3;
+        font-weight: 600;
+    }
+}
+.next-post{
+    padding-left: 34px;
+}
+.prev-post{
+    padding-right: 34px;
+}
+.next-post,
+.prev-post{
+    position: relative;
+}
+.next-post::after,
+.prev-post::after{
+    content: url(../../../img/blog/arrow-left.svg);
+    position: absolute;
+}
+.next-post::after{
+    left: 0;
+    top: 0;
+}
+.prev-post::after{
+    right: 0;
+    top: -2px;
+    transform: rotateZ(180deg);
+}
+.articles__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & + &{
+        margin-top: 32px;
+    }
+    &-info{
+        flex-basis: 540px;
+    }
+    &-title{
+        @extend %title3-galien;
+        font-size: 26px;
+        letter-spacing: normal;
+    }
+    &-descr{
+        margin: 16px 0 14px 0;
+    }
+}
+
+
+
+/* ============================================== Media ============================================== */
+@import '../media/blog-media.scss';

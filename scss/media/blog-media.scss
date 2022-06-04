@@ -1,0 +1,126 @@
+
+@media (max-width: 970px) {
+    .other{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .other__items{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 800px;
+    }    
+    .other__item{
+        margin-top: 42px;
+    }
+    
+    .popular__items-first{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 940px) {
+    .first{
+        flex-direction: column;
+    }
+    .first__title{
+        margin-bottom: 16px;
+    }
+    .first__img{
+        margin-top: 16px;
+        order: 1;
+    }
+    .first__info{
+        max-width: 540px;
+    }
+    .first__descr{
+        display: none;
+    }
+    .popular__link{
+        margin: 24px 0 14px 0;
+    }
+}
+
+@media (max-width: 890px) {
+    .articles__item-title{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .articles__item-info{
+        flex-basis: 400px;
+    }
+    .articles__item{
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 760px) {
+    .articles__item-info{
+        flex-basis: 320px;
+    }
+    .articles__item{
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:700px) {
+    .search__input{
+        padding: 0 36px 0 72px;
+    }
+}
+
+@media (max-width: 670px) {
+    .articles__item{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-basis: 320px;
+    }
+    .articles__item-info{
+        max-width: 320px;
+    }
+    .articles__item-title{
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .other__items{
+        max-width: 320px;
+    }
+    .popular__link{
+        align-self: center;
+    }
+    .other__item-title{
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    .introduction__text{
+        display: none;
+    }
+    .search__input{
+        padding: 0 18px 0 52px;
+    }
+}
+
+@media (max-width: 403px) {
+    .menu{
+        width: 100%;
+    }
+    .first__title{
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 350px) {
+    .introduction__title{
+        font-size: 34px;
+        line-height: 64px;
+    }
+}
+
+@import 'footer-media.scss';

@@ -1,0 +1,35 @@
+/* ============================================= Global ============================================= */
+html,
+body{
+    height: 100%;
+    font-family: 'Gilroy';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: $blue1;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main{
+    flex: 1 0 auto;
+}
+.footer{
+    flex: 0 0 auto;
+}
+
+.container{
+    max-width: 970px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.container-width{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
