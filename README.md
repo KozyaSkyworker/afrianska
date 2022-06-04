@@ -1,2 +1,3 @@
 # afrianska
-Learn project
+## Learn project
+Учебный проект из трёх страниц
